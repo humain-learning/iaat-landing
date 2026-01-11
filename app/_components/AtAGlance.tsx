@@ -6,7 +6,7 @@ export const AtAGlance = () => {
         <div className="w-full flex flex-col p-5 scroll-offset-target" id="overview">
             <h2 className=" w-full text-3xl font-bold pb-4 text-[#004b8c]">At A Glance</h2>
 
-            <div className="w-full text-xl h-auto flex flex-col items-start justify-start p-5 rounded-2xl border shadow-[1vmin_1vmin_0_0_#004b8c]">
+            <div className="w-full max-w-[25vw] text-xl h-auto flex flex-col items-start justify-start p-5 rounded-2xl border shadow-[1vmin_1vmin_0_0_#004b8c]">
                 <span className="pb-0.5 font-normal">Course:</span>
                 <span className="py-0.5 font-bold">PG Certificate in IB Education</span>
                 <span className="pb-0.5 pt-5 font-normal">Mode:</span>
@@ -21,7 +21,7 @@ export const AtAGlance = () => {
                     text="Experience a Class" 
                     href="/apply" 
                     className="mt-5 w-full"
-                    icon={<img src="/icons/play-button.svg" alt="Play Icon" className="h-5 w-5 object-contain" />}
+                    icon={<img src="/icons/playButton.svg" alt="Play Icon" className="h-5 w-5 object-contain ml-2" />}
                 />
             </div>
         </div>

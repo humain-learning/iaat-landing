@@ -31,4 +31,4 @@ export const cards = [
     },
 ];
 
-const frontColours = ['#bee2f0', '#9bc7e0', '#4e8aac', '#3a7ea5', '#1c638f'];  
+export const frontColours = ['#bee2f0', '#9bc7e0', '#4e8aac', '#3a7ea5', '#1c638f'];

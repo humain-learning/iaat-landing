@@ -30,7 +30,7 @@ export const Distinction = () => {
                     grabCursor={true}
                     onSwiper={(swiper) => (swiperRef.current = swiper)}
                     onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-                    className="w-full bg-black"
+                    className="w-full"
                 >
                     {videos.map((video, index) => (
                         <SwiperSlide key={video.id}>
