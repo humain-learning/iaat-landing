@@ -2,7 +2,7 @@
 import { useRef, useState } from "react";
 import { Slide1 } from "./Slide1";
 import { Slide2 } from "./Slide2";
-import { Button } from "../../ui/Button";
+import { PrimaryButton } from "../../ui/PrimaryButton";
 
 // Color sets for the gradient bands
 const slide1Colors = ['#ffffff', '#e6f4fa', '#d5e8f2', '#b8d0de', '#b0cbdb', '#a4c1d2', '#9db5cc'];
@@ -101,10 +101,10 @@ export const Hero = () => {
 
             {/* Static CTA buttons */}
             <div className="absolute bottom-15 left-10 z-50">
-                <Button text='Apply Now!' href='/apply' />
+                <PrimaryButton text='Apply Now!' href='/apply' />
             </div>
             <div className="absolute bottom-15 right-10 z-50">
-                <Button text="Enquire Today!" href="/enquire" />
+                <PrimaryButton text="Inquire Today!" href="/inquire" />
             </div>
         </div>
     );

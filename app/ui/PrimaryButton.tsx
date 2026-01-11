@@ -6,14 +6,16 @@ interface ButtonProps {
     external?: boolean; // Opens in new tab if true
     variant?: 'primary' | 'outline';
     className?: string;
+    icon?: React.ReactNode; // Optional icon element
 }
 
-export const Button = ({ 
+export const PrimaryButton = ({ 
     text, 
     href, 
     external = false, 
     variant = 'primary',
-    className = '' 
+    className = '',
+    icon
 }: ButtonProps) => {
     const baseClasses = "rounded-lg p-2 font-medium transition-colors duration-200";
     
@@ -32,14 +34,28 @@ export const Button = ({
                 rel="noopener noreferrer"
                 className={combinedClasses}
             >
-                {text}
+                {icon ? (
+                    <span className="flex items-center justify-center gap-2">
+                        {text}
+                        {icon}
+                    </span>
+                ) : (
+                    text
+                )}
             </a>
         );
     }
 
     return (
         <Link href={href} className={combinedClasses}>
-            {text}
+            {icon ? (
+                <span className="flex items-center justify-center gap-2">
+                    {text}
+                    {icon}
+                </span>
+            ) : (
+                text
+            )}
         </Link>
     );
 };

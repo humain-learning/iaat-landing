@@ -5,6 +5,7 @@
   --foreground: #171717;
   --primary: #3b82f6;
   --secondary: #6b7280;
+  --sticky-offset: 0px;
 }
 
 @theme inline {
@@ -28,4 +29,16 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-offset-target {
+  scroll-margin-top: var(--sticky-offset, 0px);
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
 }

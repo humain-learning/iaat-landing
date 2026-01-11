@@ -1,4 +1,4 @@
-import { Button } from '../../ui/Button';
+import { Button } from '../../ui/PrimaryButton';
 
 export const Slide2 = () => {
     return (

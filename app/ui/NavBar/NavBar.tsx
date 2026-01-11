@@ -1,19 +1,26 @@
 'use client';
-
-const navItems = [
-    { label: 'Overview', href: '#overview' },
-    { label: 'Why This Course', href: '#why-this-course' },
-    { label: 'What You Will Explore', href: '#what-you-will-explore' },
-    { label: 'What Schools are Looking For', href: '#what-schools-are-looking-for' },
-    { label: 'Who Is It For', href: '#who-is-it-for' },
-    { label: 'Collaborations', href: '#collaborations' },
-    { label: 'Apply', href: '#apply' },
-    { label: 'FAQs', href: '#faqs' },
-];
+import { useEffect, useRef } from "react";
+import { navItems } from "./navItems";
 
 export const NavBar = () => {
+    const navRef = useRef<HTMLElement | null>(null);
+
+    useEffect(() => {
+        const updateOffset = () => {
+            const navEl = navRef.current;
+            if (!navEl) return;
+            const rect = navEl.getBoundingClientRect();
+            const offset = Math.ceil(rect.top + rect.height);
+            document.documentElement.style.setProperty('--sticky-offset', `${offset}px`);
+        };
+
+        updateOffset();
+        window.addEventListener('resize', updateOffset);
+        return () => window.removeEventListener('resize', updateOffset);
+    }, []);
+
     return (
-        <nav className="sticky top-[10vh] z-40 w-full bg-[#124477] text-white">
+        <nav ref={navRef} className="sticky top-[10vh] z-40 w-full bg-[#124477] text-white">
             <div className="w-full overflow-x-auto scrollbar-hide">
                 <ul className="flex items-center justify-start md:justify-center gap-1 px-4 py-3 min-w-max">
                     {navItems.map((item) => (

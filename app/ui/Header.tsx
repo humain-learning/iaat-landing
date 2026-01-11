@@ -10,7 +10,6 @@ export const Header = () => {
             
             {/* Right endorsement */}
             <div className="flex items-center gap-3">
-                <span className="text-foreground text-sm">Endorsed by</span>
                 <img 
                     src="/logos/uni-mel-logo.svg" 
                     alt="Endorsement logo" 
