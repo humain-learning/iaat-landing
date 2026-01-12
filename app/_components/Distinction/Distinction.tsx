@@ -64,6 +64,7 @@ export const Distinction = () => {
                         </div>
                     ))}
                 </div>
+                <div className='py-5'><span className='text-sm text-blue-500'>Portfolio:</span><span className='text-sm'> Showcase of growth and authentic voice</span></div>
             </div>
         </div>
     );

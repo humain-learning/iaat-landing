@@ -17,11 +17,11 @@ export const Card = ({ title, description }: CardProps) => {
   };
 
   return (
-    <div className="h-120 w-80 bg-transparent perspective-midrange py-10">
-      <div className={`relative h-full w-full p- transition-transform duration-1000 transform-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
+    <div className="h-120 w-80 bg-transparent perspective-[1000rem] py-2">
+      <div className={`relative h-full w-full p- transition-transform duration-600 transform-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
         
         {/* Front */}
-        <div className="absolute flex w-full h-full flex-col justify-between border backface-hidden rounded-lg overflow-hidden drop-shadow-2xl">
+        <div className="absolute flex w-full h-full flex-col justify-between border backface-hidden rounded-lg overflow-hidden">
           <div className="w-full h-1/2">
             {frontColours.map((color, index) => (
               <div className='w-full h-1/5 flex flex-col' key={index} style={{backgroundColor:color}}/>
@@ -34,7 +34,7 @@ export const Card = ({ title, description }: CardProps) => {
             <h2 className="text-xl font-semibold ">{title}</h2>
             <button
               onClick={handleFlip}
-              className="absolute bottom-5 left-5 text-xs rounded-md hover:bg-[#093a68] transition-colors underline underline-offset-4"
+              className="absolute bottom-5 left-5 text-xs rounded-md underline underline-offset-2 pointer"
             >
               See More
             </button>
@@ -43,10 +43,10 @@ export const Card = ({ title, description }: CardProps) => {
         
         {/* Back */}
         <div className="absolute flex h-full w-full rotate-y-180 flex-col border justify-start items-start p-5 bg-white backface-hidden rounded-lg">
-          <p className="text-sm">{description}</p>
+          <p className="text-lg py-20">{description}</p>
           <button
               onClick={handleFlip}
-              className="absolute bottom-5 left-5 text-xs rounded-md hover:bg-[#093a68] transition-colors underline underline-offset-4"
+              className="absolute bottom-5 left-5 text-xs rounded-md underline underline-offset-2"
             >
               See Less
             </button>

@@ -1,14 +1,14 @@
-const circleClasses = "absolute w-[60%] h-[60%] rounded-full mix-blend-multiply bg-gradient-to-b from-[#98C6E0]/50 to-[#2475A0]/95 flex justify-center items-center text-center p-4 text-white text-sm md:text-base lg:text-lg font-medium transition-transform duration-300 hover:scale-105 hover:z-50";
+const circleClasses = "absolute w-[60%] h-[60%] rounded-full mix-blend-multiply bg-gradient-to-b from-[#98C6E0]/50 to-[#2475A0]/95 flex justify-center items-center text-center p-2 xs:p-3 sm:p-4 text-white text-[0.65rem] xs:text-xs sm:text-sm md:text-base lg:text-lg font-medium transition-transform duration-300 hover:scale-105 hover:z-50";
 
 export const Slide1 = () => {
     return (
         <div className="w-full h-full flex flex-col relative">
             {/* --- Header Section --- */}
-            <div className="flex-none z-30 relative text-foreground px-5 py-10">
-                <h1 className="text-3xl md:text-5xl mb-2">
+            <div className="flex-none z-30 relative text-foreground px-3 xs:px-4 sm:px-5 py-6 xs:py-8 sm:py-10">
+                <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-5xl mb-1 sm:mb-2">
                     Triad of Excellence
                 </h1>
-                <div className="flex flex-col text-lg md:text-xl text-gray-600">
+                <div className="flex flex-col text-sm xs:text-base sm:text-lg md:text-xl text-gray-600">
                     <span>IB Ready, Classroom Ready</span>
                     <span>and Future Ready.</span>
                 </div>
@@ -16,7 +16,7 @@ export const Slide1 = () => {
 
             <div className="grow flex items-center justify-center w-full z-20 relative">
 
-                <div className="relative w-full max-w-[85vw] md:max-w-[450px] aspect-square">
+                <div className="relative w-full max-w-[75vw] xs:max-w-[80vw] sm:max-w-[85vw] md:max-w-[450px] aspect-square">
                     
                     {/* Top Circle */}
                     <div className={`${circleClasses} top-0 left-1/2 -translate-x-1/2`}>
@@ -36,23 +36,25 @@ export const Slide1 = () => {
                 </div>
             </div>
 
-            <div className="flex-none w-full flex justify-between items-center z-30 px-5 pb-15">
+            <div className="flex-none w-full flex justify-between items-center z-30 px-[1.875rem] xs:px-4 sm:px-5 pb-12 xs:pb-14 sm:pb-15">
                 
                 <div className="flex flex-col">
-                    <div className="flex items-center mb-5">
-                        <img src="/logos/iaat-logo.svg" alt="IAAT Logo" className="h-15 w-auto" />
+                    <div className="flex items-center mb-3 xs:mb-4 sm:mb-5">
+                        <img src="/logos/ibec-logo.jpg" alt="IB Logo" className="h-10 xs:h-12 sm:h-15 w-auto object-contain" />
+                        <div className="h-10 xs:h-12 sm:h-16 w-px bg-black mx-5 xs:mx-6 sm:mx-7.5"></div>
+                        <img src="/logos/iaat-logo.svg" alt="IAAT Logo" className="h-10 xs:h-12 sm:h-15 w-auto" />
                     </div>
                     {/* Button moved to Hero.tsx */}
-                    <div className="h-10"></div>
+                    <div className="h-8 sm:h-10"></div>
                 </div>
 
                 <div className="flex flex-col">
-                    <div className='flex items-center gap-6 mb-5'>
-                        <img src="/logos/ibec-logo.jpg" alt="IB Logo" className="h-15 w-auto object-contain" />
-                        <img src="/logos/uni-mel-logo.svg" alt="Uni Mel Logo" className="h-15 w-auto object-contain" />
+                    <div className='flex items-center gap-3 xs:gap-4 sm:gap-6 mb-3 xs:mb-4 sm:mb-5'>
+                        
+                        <img src="/logos/uni-mel-logo.svg" alt="Uni Mel Logo" className="h-10 xs:h-12 sm:h-15 w-auto object-contain" />
                     </div>
                     {/* Button moved to Hero.tsx */}
-                    <div className="h-10"></div>
+                    <div className="h-8 sm:h-10"></div>
                 </div>
 
             </div>

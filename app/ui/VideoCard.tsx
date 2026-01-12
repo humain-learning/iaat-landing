@@ -10,9 +10,10 @@ interface VideoCardProps {
         student?: string;
     };
     index?: number;
+    vertical?: boolean;
 }
 
-export const VideoCard = ({ video, index = 0 }: VideoCardProps) => {
+export const VideoCard = ({ video, index = 0, vertical = false }: VideoCardProps) => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [isMuted, setIsMuted] = useState(false);
     const iframeRef = useRef<HTMLIFrameElement | null>(null);
@@ -98,7 +99,7 @@ export const VideoCard = ({ video, index = 0 }: VideoCardProps) => {
     if (!videoUrl) {
         return (
             <div className={`w-full m-4 rounded-3xl overflow-hidden bg-gray-200 transition duration-300`}>
-                <div className="relative pt-[56.25%] flex items-center justify-center">
+                <div className={`relative flex items-center justify-center ${vertical ? 'pt-[177.78%]' : 'pt-[56.25%]'}`}>
                     <p className="text-gray-500 text-sm p-4">Video Placeholder</p>
                 </div>
             </div>
@@ -107,7 +108,7 @@ export const VideoCard = ({ video, index = 0 }: VideoCardProps) => {
 
     return (
         <div className='w-full rounded-lg bg-white transition duration-300 object-fill overflow-hidden border'>
-            <div className="relative pt-[56.25%]">
+            <div className={`relative ${vertical ? 'pt-[177.78%]' : 'pt-[56.25%]'}`}>
                 <iframe
                     ref={iframeRef}
                     className="absolute top-0 left-0 w-full h-full pointer-events-none bg-black"
@@ -121,12 +122,12 @@ export const VideoCard = ({ video, index = 0 }: VideoCardProps) => {
                 <button
                     aria-label={isMuted ? 'Unmute video' : 'Mute video'}
                     onClick={toggleMute}
-                    className="absolute top-3 right-2 z-20 bg-transparent p-2 rounded-full flex items-center justify-center transition hover:scale-105"
+                    className={`absolute z-20 bg-transparent rounded-full flex items-center justify-center transition hover:scale-105 ${vertical ? 'top-1 right-1 p-1' : 'top-3 right-2 p-2'}`}
                 >
                     {isMuted ? (
-                        <img src="/icons/muted.svg" alt="Muted" className="h-7 w-7 drop-shadow-[0_0_6px_rgba(0,0,0,0.35)]" />
+                        <img src="/icons/muted.svg" alt="Muted" className={`drop-shadow-[0_0_6px_rgba(0,0,0,0.35)] ${vertical ? 'h-4 w-4' : 'h-7 w-7'}`} />
                     ) : (
-                        <img src="/icons/unmuted.svg" alt="Unmuted" className="h-7 w-7 drop-shadow-[0_0_6px_rgba(0,0,0,0.35)]" />
+                        <img src="/icons/unmuted.svg" alt="Unmuted" className={`drop-shadow-[0_0_6px_rgba(0,0,0,0.35)] ${vertical ? 'h-4 w-4' : 'h-7 w-7'}`} />
                     )}
                 </button>
 
@@ -134,12 +135,12 @@ export const VideoCard = ({ video, index = 0 }: VideoCardProps) => {
                 <button
                     aria-label={isPlaying ? 'Pause video' : 'Play video'}
                     onClick={togglePlay}
-                    className="absolute bottom-4 right-4 z-20 bg-transparent p-2 rounded-full flex items-center justify-center transition hover:scale-105"
+                    className={`absolute z-20 bg-transparent rounded-full flex items-center justify-center transition hover:scale-105 ${vertical ? 'bottom-1 right-1 p-1' : 'bottom-4 right-4 p-2'}`}
                 >
                     {isPlaying ? (
-                        <img src="/icons/pauseButton.svg" alt="Pause" className="h-5 w-5 drop-shadow-[0_0_6px_rgba(0,0,0,0.35)]" />
+                        <img src="/icons/pauseButton.svg" alt="Pause" className={`drop-shadow-[0_0_6px_rgba(0,0,0,0.35)] ${vertical ? 'h-3 w-3' : 'h-5 w-5'}`} />
                     ) : (
-                        <img src="/icons/playButton.svg" alt="Play" className="h-5 w-5 drop-shadow-[0_0_6px_rgba(0,0,0,0.35)]" />
+                        <img src="/icons/playButton.svg" alt="Play" className={`drop-shadow-[0_0_6px_rgba(0,0,0,0.35)] ${vertical ? 'h-3 w-3' : 'h-5 w-5'}`} />
                     )}
                 </button>
             </div>

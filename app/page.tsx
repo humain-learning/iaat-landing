@@ -4,8 +4,8 @@ import { NavBar } from "./ui/NavBar/NavBar";
 import { AtAGlance } from "./_components/AtAGlance";
 import { Distinction } from "./_components/Distinction/Distinction";
 import { Explore } from "./_components/Explore/Explore";
-
-
+import { Progressive } from "./_components/Progressive/Progressive";
+import { Transforming } from "./_components/Transforming/Transforming";
 
 
 export default function Home() {
@@ -16,6 +16,8 @@ export default function Home() {
         <AtAGlance />
         <Distinction />
         <Explore />
+        <Progressive />
+        <Transforming />
         </>
   );
 }
