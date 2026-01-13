@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -36,43 +35,19 @@ html {
   scroll-behavior: smooth;
 }
 
+.scroll-offset-target {
+  scroll-margin-top: var(--sticky-offset, 0px);
+}
 
 .backface-hidden {
   backface-visibility: hidden;
 }
 
 /* Hide scrollbar for swipeable containers */
-/* .scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;
-} */
-
-/* Marquee animations */
-@keyframes marquee-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-@keyframes marquee-right {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.animate-marquee-left {
-  animation: marquee-left 20s linear infinite;
-}
-
-.animate-marquee-right {
-  animation: marquee-right 20s linear infinite;
+  display: none;  /* Chrome, Safari and Opera */
 }
