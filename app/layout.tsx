@@ -29,9 +29,7 @@ export default function RootLayout({
         className={`${inter.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-        <main className="flex flex-col">
           {children}
-        </main>
       </body>
     </html>
   );

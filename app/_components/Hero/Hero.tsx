@@ -81,10 +81,10 @@ export const Hero = () => {
             </button>
 
             {/* Static CTA buttons */}
-            <div className="absolute bottom-10 xs:bottom-12 sm:bottom-15 left-3 xs:left-5 sm:left-10 z-50">
+            <div className="absolute bottom-5 left-5 z-50">
                 <PrimaryButton text='Apply Now!' href='/apply' />
             </div>
-            <div className="absolute bottom-10 xs:bottom-12 sm:bottom-15 right-3 xs:right-5 sm:right-10 z-50">
+            <div className="absolute bottom-5 right-5 z-50">
                 <PrimaryButton text="Explore More" href="/inquire" />
             </div>
         </div>

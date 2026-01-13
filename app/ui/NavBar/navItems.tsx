@@ -6,5 +6,4 @@ export const navItems = [
     { label: 'Who Is It For', href: '#who-is-it-for' },
     { label: 'Collaborations', href: '#collaborations' },
     { label: 'Apply', href: '#apply' },
-    { label: 'FAQs', href: '#faqs' },
 ];

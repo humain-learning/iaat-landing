@@ -1,8 +1,5 @@
 @import "tailwindcss";
 
-@theme inline {
-  --breakpoint-xs: 375px;
-}
 
 :root {
   --background: #ffffff;
@@ -39,22 +36,19 @@ html {
   scroll-behavior: smooth;
 }
 
-.scroll-offset-target {
-  scroll-margin-top: var(--sticky-offset, 0px);
-}
 
 .backface-hidden {
   backface-visibility: hidden;
 }
 
 /* Hide scrollbar for swipeable containers */
-.scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+/* .scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;  /* Chrome, Safari and Opera */
-}
+  display: none;
+} */
 
 /* Marquee animations */
 @keyframes marquee-left {

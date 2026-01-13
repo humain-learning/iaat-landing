@@ -70,7 +70,7 @@ export const Explore = () => {
       </div>
 
 
-      <div className="flex w-full h-full text-wrap px-5">
+      <div className="flex w-full h-auto text-wrap px-5">
         <div className='text-md text-center'>
           Grow into the educator you aspire to be, leading with clarity, compassion and a commitment to continuous development.
         </div>

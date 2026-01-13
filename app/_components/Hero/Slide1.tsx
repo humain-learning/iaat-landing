@@ -4,11 +4,11 @@ export const Slide1 = () => {
     return (
         <div className="w-full h-full flex flex-col relative">
             {/* --- Header Section --- */}
-            <div className="flex-none z-30 relative text-foreground px-3 xs:px-4 sm:px-5 py-6 xs:py-8 sm:py-10">
-                <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-5xl mb-1 sm:mb-2">
+            <div className="flex-none z-30 relative text-foreground pt-10 px-5">
+                <h1 className=" text-5xl mb-1 sm:mb-2">
                     Triad of Excellence
                 </h1>
-                <div className="flex flex-col text-sm xs:text-base sm:text-lg md:text-xl text-gray-600">
+                <div className="flex flex-col text-2xl text-gray-600">
                     <span>IB Ready, Classroom Ready</span>
                     <span>and Future Ready.</span>
                 </div>
@@ -25,18 +25,18 @@ export const Slide1 = () => {
 
                     {/* Bottom Left Circle */}
                     <div className={`${circleClasses} bottom-0 left-0 -translate-x-[5%] -translate-y-[5%] justify-start`}>
-                        <span className="w-[80%] pl-5 pt-5">The University of Melbourne’s Academic Rigour</span>
+                        <span className="w-[80%] pr-2 pt-5">The University of Melbourne’s Academic Rigour</span>
                     </div>
 
                     {/* Bottom Right Circle */}
                     <div className={`${circleClasses} bottom-0 right-0 translate-x-[5%] -translate-y-[5%] justify-end `}>
-                        <span className="w-[80%] pr-5 pt-5">IAAT’s Human Centred Pedagogy</span>
+                        <span className="w-[80%] pl-2 pt-5">IAAT’s Human Centred Pedagogy</span>
                     </div>
 
                 </div>
             </div>
 
-            <div className="flex-none w-full flex justify-between items-center z-30 px-[1.875rem] xs:px-4 sm:px-5 pb-12 xs:pb-14 sm:pb-15">
+            <div className="flex-none w-full flex justify-between items-center z-30 px-7.5 xs:px-4 sm:px-5 pb-12 xs:pb-14 sm:pb-15">
                 
                 <div className="flex flex-col">
                     <div className="flex items-center mb-3 xs:mb-4 sm:mb-5">
@@ -44,8 +44,6 @@ export const Slide1 = () => {
                         <div className="h-10 xs:h-12 sm:h-16 w-px bg-black mx-5 xs:mx-6 sm:mx-7.5"></div>
                         <img src="/logos/iaat-logo.svg" alt="IAAT Logo" className="h-10 xs:h-12 sm:h-15 w-auto" />
                     </div>
-                    {/* Button moved to Hero.tsx */}
-                    <div className="h-8 sm:h-10"></div>
                 </div>
 
                 <div className="flex flex-col">
@@ -53,8 +51,6 @@ export const Slide1 = () => {
                         
                         <img src="/logos/uni-mel-logo.svg" alt="Uni Mel Logo" className="h-10 xs:h-12 sm:h-15 w-auto object-contain" />
                     </div>
-                    {/* Button moved to Hero.tsx */}
-                    <div className="h-8 sm:h-10"></div>
                 </div>
 
             </div>

@@ -18,7 +18,7 @@ export const Distinction = () => {
     };
 
     return (
-        <div className="w-full flex flex-col p-5 scroll-offset-target" id="why-this-course">
+        <div className="w-full flex flex-col p-5" id="why-this-course">
             <h1 className="w-full text-3xl font-normal pb-4">What Makes PGC-IB Distinctive</h1>
             
             <div className="w-full max-w-4xl mx-auto">
