@@ -3,7 +3,7 @@ import { PrimaryButton } from "../../ui/PrimaryButton";
 
 export const AtAGlance = () => {
     return (
-        <div className="w-full flex flex-col p-5" id="overview">
+        <div className="w-full flex flex-col p-5 scroll-offset-target" id="overview">
             <h2 className=" w-full text-3xl font-bold pb-4 text-[#004b8c]">At A Glance</h2>
 
             <div className="w-full md:max-w-[25vw] text-xl h-auto flex flex-col items-start justify-start p-5 rounded-2xl border shadow-[1vmin_1vmin_0_0_#004b8c]">

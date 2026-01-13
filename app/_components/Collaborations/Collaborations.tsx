@@ -2,7 +2,7 @@ import { logos } from "./data";
 
 export const Collaborations = () => {
     return (
-        <div className="w-full flex flex-col p-5">
+        <div className="w-full flex flex-col p-5 scroll-offset-target" id='collaborations'>
             <h1 className="text-3xl font-bold text-[#0b477f]">
                 Collaborations
             </h1>

@@ -3,7 +3,7 @@ import { cardData } from "./data";
 
 export const ForWho = () => {
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col scroll-offset-target" id='for-who'>
             <div className="w-full h-full bg-[#124477] px-5 py-2 flex items-center justify-start">
                 <img src='/assets/for-who-title.svg' className="object-contain h-full w-auto px-5" />
                 <h1 className="font-normal text-white text-3xl px-5">
