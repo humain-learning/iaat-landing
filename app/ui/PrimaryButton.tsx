@@ -20,8 +20,8 @@ export const PrimaryButton = ({
     const baseClasses = "rounded-lg p-2 font-medium transition-colors duration-200";
     
     const variantClasses = {
-        primary: "bg-[#124477] border-white border-2 text-white text-center hover:bg-[#1a5575]",
-        outline: "bg-transparent border-[#124477] border-2 text-[#124477] hover:bg-[#124477] hover:text-white"
+        primary: "bg-[#124477] text-white text-center hover:bg-[#1a5575]",
+        outline: "bg-transparent border-[#124477] text-[#124477] hover:bg-[#124477] hover:text-white"
     };
 
     const combinedClasses = `${baseClasses} ${variantClasses[variant]} ${className}`;
