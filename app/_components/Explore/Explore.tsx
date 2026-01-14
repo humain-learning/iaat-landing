@@ -63,7 +63,7 @@ export const Explore = () => {
       </div>
 
       {/* Desktop: 3x2 grid */}
-      <div className="hidden md:grid grid-cols-2 gap-8 items-center justify-center md:max-w-[90vw] lg:max-w-[70vw] mx-auto">
+      <div className="hidden md:grid md:grid-cols-3 gap-8 items-center justify-center md:max-w-[90vw] lg:max-w-[70vw] mx-auto">
         {cards.map((card) => (
           <Card key={card.id} {...card} />
         ))}

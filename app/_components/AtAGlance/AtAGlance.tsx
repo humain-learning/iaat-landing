@@ -13,15 +13,20 @@ export const AtAGlance = () => {
                 <span className="py-0.5 font-bold">Online, Synchronous</span>
                 <span className="pb-0.5 pt-5 font-normal">Duration:</span>
                 <span className="py-0.5 font-bold">10 Months</span>
-                <button className="text-lg pt-7 flex items-end justify-center underline underline-offset-4">
-                    <span className="">Download FAQs</span>
+                <a
+                    href="/files/PGC-IB FAQs.pdf"
+                    download
+                    className="text-lg pt-7 flex items-end justify-center underline underline-offset-4"
+                >
+                    <span>Download FAQs</span>
                     <img src="/icons/download.svg" alt="Download Icon" className="h-[80%] ml-2 object-contain pb-0.5" />
-                </button>
+                </a>
                 <PrimaryButton 
                     text="Download Brochure" 
-                    href="/apply" 
+                    href="/files/PGC-IB Brochure.pdf" // Update this path to your actual file location
                     className="mt-5 w-full"
                     icon={<img src="/icons/download.svg" alt="Play Icon" className="h-5 w-5 object-contain ml-2" />}
+                    download
                 />
             </div>
         </div>

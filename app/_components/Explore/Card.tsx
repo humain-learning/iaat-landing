@@ -29,9 +29,9 @@ export const Card = ({ title, description }: CardProps) => {
           </div>
           
           
-          <div className="relative w-full h-1/2 flex p-5 text-white flex-col items-start justify-between bg-[#0b477f]">
+          <div className="relative w-full h-1/2 flex py-5 px-3 text-white flex-col items-start justify-between bg-[#0b477f]">
           
-            <h2 className="text-xl md:text-sm lg:text-lg font-semibold ">{title}</h2>
+            <h2 className="text-xl md:text-xs lg:text-sm xl:text-md font-semibold ">{title}</h2>
             <button
               onClick={handleFlip}
               className="absolute bottom-5 left-5 text-xs rounded-md underline underline-offset-2 pointer"
@@ -42,8 +42,8 @@ export const Card = ({ title, description }: CardProps) => {
         </div>
         
         {/* Back */}
-        <div className="absolute flex h-full w-full rotate-y-180 flex-col border justify-start items-start p-5 bg-white backface-hidden rounded-lg">
-          <p className="text-lg py-20">{description}</p>
+        <div className="absolute flex h-full w-full rotate-y-180 border justify-start items-center p-5 bg-white backface-hidden rounded-lg">
+          <p className="text-lg md:text-sm text-center">{description}</p>
           <button
               onClick={handleFlip}
               className="absolute bottom-5 left-5 text-xs rounded-md underline underline-offset-2"

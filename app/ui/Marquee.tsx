@@ -1,36 +1,74 @@
-'use client';
+import { ComponentPropsWithoutRef } from "react"
 
-interface MarqueeProps {
-    logos: { id: number; src: string; alt: string }[];
-    speed?: number; // seconds for one full loop
-    direction?: 'left' | 'right';
-    pauseOnHover?: boolean;
+import { cn } from "@/lib/utils"
+
+interface MarqueeProps extends ComponentPropsWithoutRef<"div"> {
+  /**
+   * Optional CSS class name to apply custom styles
+   */
+  className?: string
+  /**
+   * Whether to reverse the animation direction
+   * @default false
+   */
+  reverse?: boolean
+  /**
+   * Whether to pause the animation on hover
+   * @default false
+   */
+  pauseOnHover?: boolean
+  /**
+   * Content to be displayed in the marquee
+   */
+  children: React.ReactNode
+  /**
+   * Whether to animate vertically instead of horizontally
+   * @default false
+   */
+  vertical?: boolean
+  /**
+   * Number of times to repeat the content
+   * @default 4
+   */
+  repeat?: number
 }
 
-export const Marquee = ({ 
-    logos, 
-    speed = 10, 
-    direction = 'left',
-    pauseOnHover = true 
-}: MarqueeProps) => {
-    // Duplicate logos multiple times for seamless loop
-    const duplicatedLogos = [...logos, ...logos, ...logos, ...logos];
-
-    return (
-        <div className={`w-full overflow-hidden ${pauseOnHover ? 'group' : ''}`}>
-            <div 
-                className={`flex items-center gap-12 w-max ${direction === 'left' ? 'animate-marquee-left' : 'animate-marquee-right'} ${pauseOnHover ? 'group-hover:[animation-play-state:paused]' : ''}`}
-                style={{ animationDuration: `${speed}s` }}
-            >
-                {duplicatedLogos.map((logo, index) => (
-                    <img
-                        key={`${logo.id}-${index}`}
-                        src={logo.src}
-                        alt={logo.alt}
-                        className="h-12 sm:h-16 w-auto object-contain shrink-0"
-                    />
-                ))}
-            </div>
-        </div>
-    );
-};
+export function Marquee({
+  className,
+  reverse = false,
+  pauseOnHover = false,
+  children,
+  vertical = false,
+  repeat = 4,
+  ...props
+}: MarqueeProps) {
+  return (
+    <div
+      {...props}
+      className={cn(
+        "group flex gap-(--gap) overflow-hidden p-2 [--duration:40s] [--gap:1rem]",
+        {
+          "flex-row": !vertical,
+          "flex-col": vertical,
+        },
+        className
+      )}
+    >
+      {Array(repeat)
+        .fill(0)
+        .map((_, i) => (
+          <div
+            key={i}
+            className={cn("flex shrink-0 justify-around gap-(--gap)", {
+              "animate-marquee flex-row": !vertical,
+              "animate-marquee-vertical flex-col": vertical,
+              "group-hover:paused": pauseOnHover,
+              "direction-[reverse]": reverse,
+            })}
+          >
+            {children}
+          </div>
+        ))}
+    </div>
+  )
+}

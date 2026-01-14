@@ -1,4 +1,4 @@
-import { Marquee } from "../../ui/Marquee";
+import { Marquee } from "../../ui/marquee";
 import { logos } from "./data";
 
 
@@ -9,7 +9,11 @@ export const Transforming = () => {
                 Where Our Teachers Are Transforming Classrooms
             </h1>
             <div className="w-full overflow-hidden contain-layout_paint transform-[translateZ(0)]">
-                <Marquee logos={logos} speed={70} pauseOnHover={false} />
+                <Marquee className="py-10 [--duration:30s]">
+                    {logos.map((logo) => (
+                        <img src={logo.src} key={logo.id} alt={logo.alt} className="h-10 md:h-15 mx-3 md:mx-8" />
+                    ))}
+                </Marquee>
             </div>
         </div>
     );

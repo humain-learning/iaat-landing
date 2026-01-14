@@ -7,6 +7,7 @@ interface ButtonProps {
     variant?: 'primary' | 'outline';
     className?: string;
     icon?: React.ReactNode; // Optional icon element
+    download?: boolean; // If true, adds download attribute
 }
 
 export const PrimaryButton = ({ 
@@ -15,7 +16,8 @@ export const PrimaryButton = ({
     external = false, 
     variant = 'primary',
     className = '',
-    icon
+    icon,
+    download = false
 }: ButtonProps) => {
     const baseClasses = "rounded-lg p-2 font-medium transition-colors duration-200";
     
@@ -26,13 +28,14 @@ export const PrimaryButton = ({
 
     const combinedClasses = `${baseClasses} ${variantClasses[variant]} ${className}`;
 
-    if (external) {
+    if (external || download) {
         return (
             <a 
                 href={href} 
-                target="_blank" 
-                rel="noopener noreferrer"
+                target={external ? "_blank" : undefined}
+                rel={external ? "noopener noreferrer" : undefined}
                 className={combinedClasses}
+                download={download ? true : undefined}
             >
                 {icon ? (
                     <span className="flex items-center justify-center gap-2">

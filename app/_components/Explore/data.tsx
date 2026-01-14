@@ -2,32 +2,32 @@ export const cards = [
     {
         id: 1,
         title: 'The Foundations of IB Philosophy',
-        description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        description: 'The foundational philosophy, approach, structures and curriculum principles of the IB Primary Years Programme.'
     },
     {
         id: 2,
         title: 'Designing Concept-Driven & Transdisciplinary Curriculum',
-        description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        description: 'Essential understanding and skills required to design and facilitate transdisciplinary, inquiry-based, developmentally appropriate learning experiences.'
     },
     {
         id: 3,
         title: 'Assessment That Supports Growth',
-        description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        description: 'Designing authentic, aligned, and responsive assessment systems that support learning.'
     },
     {
         id: 4,
         title: 'Creating Inclusive, Caring, Responsive Learning Spaces',
-        description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        description: 'A reflective, collaborative and inquiry-driven professional approach, thereby strengthening learners’ capacity for ongoing growth.'
     },
     {
         id: 5,
         title: 'Teaching Literacy and Numeracy',
-        description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        description: 'Engage with ways of nurturing language and mathematical thinking that are authentic, conceptual, and deeply connected to children’s lives and identities.'
     },
     {
         id: 6,
         title: 'Shaping Personal Leadership & Professional Identity',
-        description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        description: 'A distinctive experience that supports learners in examining their values, assumptions and relational patterns to help them develop identity, empathy and authenticity.'
     },
 ];
 
