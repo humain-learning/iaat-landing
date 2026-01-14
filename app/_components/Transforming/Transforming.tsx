@@ -1,4 +1,4 @@
-import { Marquee } from "../../ui/marquee";
+import { Marquee } from "@/app/ui/marquee";
 import { logos } from "./data";
 
 
