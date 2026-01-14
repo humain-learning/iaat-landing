@@ -18,7 +18,7 @@ export const Progressive = () => {
     return (
         <div className="w-full flex flex-col items-center justify-center py-5 px-5 scroll-offset-target" id="schools-looking">
             <h1 className="text-3xl font-bold text-[#0b477f] mb-5">
-                What Progressive Schools Are Looking For
+                What Progressive Schools Look For
             </h1>
 
             <div className="w-full max-w-6xl mx-auto">

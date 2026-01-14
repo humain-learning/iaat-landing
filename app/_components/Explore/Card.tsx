@@ -17,7 +17,7 @@ export const Card = ({ title, description }: CardProps) => {
   };
 
   return (
-    <div className="h-120 w-80 bg-transparent perspective-[1000rem] py-2">
+    <div className="w-80 h-auto md:max-w-[20vw] aspect-2/3 bg-transparent perspective-[1000rem] py-2">
       <div className={`relative h-full w-full p- transition-transform duration-600 transform-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
         
         {/* Front */}
@@ -31,7 +31,7 @@ export const Card = ({ title, description }: CardProps) => {
           
           <div className="relative w-full h-1/2 flex p-5 text-white flex-col items-start justify-between bg-[#0b477f]">
           
-            <h2 className="text-xl font-semibold ">{title}</h2>
+            <h2 className="text-xl md:text-sm lg:text-lg font-semibold ">{title}</h2>
             <button
               onClick={handleFlip}
               className="absolute bottom-5 left-5 text-xs rounded-md underline underline-offset-2 pointer"

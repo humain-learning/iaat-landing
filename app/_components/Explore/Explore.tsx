@@ -27,13 +27,13 @@ export const Explore = () => {
   };
 
   return (
-    <div className="w-full flex flex-col items-center justify-cente scroll-offset-target py-5" id='explore-what'>
+    <div className="w-full flex flex-col items-start scroll-offset-target py-5" id='explore-what'>
       <h1 className="text-3xl font-bold text-[#0b477f] px-5 mb-5">
         What You Will Explore
       </h1>
 
       {/* Mobile: horizontal scroll with snap */}
-      <div className="lg:hidden w-full">
+      <div className="md:hidden w-full">
         <div 
           ref={scrollRef}
           onScroll={handleScroll}
@@ -63,14 +63,14 @@ export const Explore = () => {
       </div>
 
       {/* Desktop: 3x2 grid */}
-      <div className="hidden lg:grid grid-cols-3 gap-8">
+      <div className="hidden md:grid grid-cols-2 gap-8 items-center justify-center md:max-w-[90vw] lg:max-w-[70vw] mx-auto">
         {cards.map((card) => (
           <Card key={card.id} {...card} />
         ))}
       </div>
 
 
-      <div className="flex w-full h-auto text-wrap px-5">
+      <div className="flex w-full h-auto text-wrap px-5 justify-center lg:py-10">
         <div className='text-md text-center'>
           Grow into the educator you aspire to be, leading with clarity, compassion and a commitment to continuous development.
         </div>

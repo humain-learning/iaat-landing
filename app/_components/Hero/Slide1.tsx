@@ -5,12 +5,11 @@ export const Slide1 = () => {
         <div className="w-full h-full flex flex-col relative">
             {/* --- Header Section --- */}
             <div className="flex-none z-30 relative text-foreground pt-10 px-5">
-                <h1 className=" text-5xl mb-1 sm:mb-2">
+                <h1 className="text-5xl mb-1 sm:mb-2">
                     Triad of Excellence
                 </h1>
-                <div className="flex flex-col text-2xl text-gray-600">
-                    <span>IB Ready, Classroom Ready</span>
-                    <span>and Future Ready.</span>
+                <div className="flex flex-col text-2xl text-gray-600 py-5">
+                    Post-Graduate Certificate in IB Education
                 </div>
             </div>
 
@@ -36,9 +35,9 @@ export const Slide1 = () => {
                 </div>
             </div>
 
-            <div className="flex-none w-full flex justify-between items-center z-30 px-7.5 xs:px-4 sm:px-5 pb-12 xs:pb-14 sm:pb-15">
+            <div className="flex-none w-full h-55 flex justify-between items-center z-30 px-7.5 xs:px-4 sm:px-5 pb-12 xs:pb-14 sm:pb-15">
                 
-                <div className="flex flex-col">
+                {/* <div className="flex flex-col">
                     <div className="flex items-center mb-3 xs:mb-4 sm:mb-5">
                         <img src="/logos/ibec-logo.jpg" alt="IB Logo" className="h-10 xs:h-12 sm:h-15 w-auto object-contain" />
                         <div className="h-10 xs:h-12 sm:h-16 w-px bg-black mx-5 xs:mx-6 sm:mx-7.5"></div>
@@ -51,7 +50,7 @@ export const Slide1 = () => {
                         
                         <img src="/logos/uni-mel-logo.svg" alt="Uni Mel Logo" className="h-10 xs:h-12 sm:h-15 w-auto object-contain" />
                     </div>
-                </div>
+                </div> */}
 
             </div>
         </div>
