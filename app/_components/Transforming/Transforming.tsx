@@ -1,3 +1,4 @@
+'use client';
 import { Marquee } from "@/app/ui/marquee";
 import { logos } from "./data";
 
