@@ -63,7 +63,7 @@ export const Explore = () => {
       </div>
 
       {/* Desktop: 3x2 grid */}
-      <div className="hidden md:grid md:grid-cols-3 gap-8 items-center justify-center md:max-w-[90vw] lg:max-w-[70vw] mx-auto">
+      <div className="hidden md:grid md:grid-cols-3 gap-8 items-center justify-center mx-auto">
         {cards.map((card) => (
           <Card key={card.id} {...card} />
         ))}
@@ -74,7 +74,6 @@ export const Explore = () => {
         <div className='text-md text-center'>
           Grow into the educator you aspire to be, leading with clarity, compassion and a commitment to continuous development.
         </div>
-      </div>
-    </div>
+      </div>x
   );
 };

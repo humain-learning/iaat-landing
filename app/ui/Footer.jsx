@@ -4,7 +4,7 @@ import { MdEmail } from "react-icons/md";
 export const Footer = () => {
     return (
         <div className="w-full bg-[#124477] py-5 px-10 flex flex-col justify-between items-center">
-            <div className="grid grid-cols-2 text-white text-md w-full md:max-w-[70%]">
+            <div className="grid grid-cols-2 text-white text-md w-full">
                 <div className="flex flex-col gap-2 text-start">
                     <a href="https://www.iamateacher.in/terms-conditions.php" target="_blank" rel="noopener noreferrer" className="hover:underline">Terms of Use</a>
                     <a href="https://www.iamateacher.in/privacy-policy.php" target="_blank" rel="noopener noreferrer" className="hover:underline">Privacy Policy</a>

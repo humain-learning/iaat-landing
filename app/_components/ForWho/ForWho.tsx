@@ -11,7 +11,7 @@ export const ForWho = () => {
                 </h1>
             </div>
 
-            <div className="w-full md:max-w-[70vw] grid grid-cols-2 md:grid-cols-3 p-5 gap-5">
+            <div className="w-full grid grid-cols-2 md:grid-cols-3 p-5 gap-5">
                 {cardData.map((card, index) => (
                     <div className="w-full" key={index}>    
                         <Card 

@@ -39,7 +39,7 @@ export const NavBar = () => {
       ref={navRef}
       className="sticky top-[10vh] z-40 w-full bg-[#124477] text-white"
     >
-      <div className="w-full overflow-x-auto scrollbar-hide">
+      <div className="w-full h-[5vh] overflow-x-auto scrollbar-hide">
         <ul className="flex items-center justify-start md:justify-center gap-1 px-4 py-3 min-w-max">
           {navItems.map((item) => (
             <li key={item.href}>
