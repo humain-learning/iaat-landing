@@ -1,5 +1,4 @@
-'use client';
-import { Marquee } from "../../ui/marquee";
+import { Marquee } from "../../ui/Marquee";
 import { logos } from "./data";
 
 
