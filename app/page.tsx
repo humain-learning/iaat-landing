@@ -4,7 +4,7 @@ import { AtAGlance } from "./_components/AtAGlance/AtAGlance";
 import { Distinction } from "./_components/Distinction/Distinction";
 import { Explore } from "./_components/Explore/Explore";
 import { Progressive } from "./_components/Progressive/Progressive";
-import { Transforming } from "./_components/Transforming/Transforming";
+// import { Transforming } from "./_components/Transforming/Transforming";
 import { ForWho } from "./_components/ForWho/ForWho";
 import { Collaborations } from "./_components/Collaborations/Collaborations";
 import { Journey } from "./_components/Journey/Journey";
@@ -20,7 +20,7 @@ export default function Home() {
         <Distinction />
         <Explore />
         <Progressive />
-        <Transforming />
+        {/* <Transforming /> */}
         <Journey />
         <ForWho />
         <Collaborations />
