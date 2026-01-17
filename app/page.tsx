@@ -14,20 +14,22 @@ import { Journey } from "./_components/Journey/Journey";
 export default function Home() {
   return (
         <div>
-          {/* <div className="md:hidden items-center justify-center" >
-          <Hero />
-          <NavBar />
-          <AtAGlance />
-          <Distinction />
-          <Explore />
-          <Progressive />
-          <Transforming />
-          <Journey />
-          <ForWho />
-          <Collaborations />
-          </div> */}
+          {/* Mobile only */}
+          <div className="md:hidden flex flex-col items-center justify-center">
+            <Hero />
+            <NavBar />
+            <AtAGlance />
+            <Distinction />
+            <Explore />
+            <Progressive />
+            <Transforming />
+            <Journey />
+            <ForWho />
+            <Collaborations />
+          </div>
 
-          <div className="">
+          {/* Desktop and tablet (md and up) only */}
+          <div className="hidden md:block">
             <Hero />
             <NavBar />
             <div className="flex w-full">
