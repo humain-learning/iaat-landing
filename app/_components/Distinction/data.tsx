@@ -1,7 +1,7 @@
 export const videos = [
     { id: 1, url: 'https://player.vimeo.com/video/123456789', title: 'Video 1' },
     { id: 2, url: 'https://player.vimeo.com/video/123456790', title: 'Video 2' },
-    { id: 3, url: 'https://player.vimeo.com/video/123456791', title: 'Video 3' },
+    { id: 3, url: 'https://player.vimeo.com/video/123456790', title: 'Video 3' },
 ];
 
 export const features = [

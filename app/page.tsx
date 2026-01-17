@@ -15,7 +15,7 @@ export default function Home() {
   return (
         <div>
           {/* Mobile only */}
-          <div className="md:hidden flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center">
             <Hero />
             <NavBar />
             <AtAGlance />
@@ -29,11 +29,11 @@ export default function Home() {
           </div>
 
           {/* Desktop and tablet (md and up) only */}
-          <div className="hidden md:block">
+          {/* <div className="hidden md:block">
             <Hero />
             <NavBar />
             <div className="flex w-full">
-              <div className="w-1/4 sticky top-[15vh]">
+              <div className="w-1/4">
                 <AtAGlance />
               </div>
               <div className="w-3/4 flex flex-col">
@@ -46,7 +46,7 @@ export default function Home() {
                 <Collaborations />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
   );
 }

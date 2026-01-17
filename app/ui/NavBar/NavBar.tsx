@@ -37,15 +37,15 @@ export const NavBar = () => {
   return (
     <nav
       ref={navRef}
-      className="sticky top-[10vh] z-40 w-full bg-[#124477] text-white"
+      className="sticky top-[10vh] z-40 w-full bg-[#124477] text-white shadow-xl"
     >
-      <div className="w-full h-[5vh] overflow-x-auto scrollbar-hide">
+      <div className="w-full h-[6vh] overflow-x-auto scrollbar-hide items-center flex">
         <ul className="flex items-center justify-start md:justify-center gap-1 px-4 py-3 min-w-max">
           {navItems.map((item) => (
             <li key={item.href}>
               <a
                 href={item.href}
-                className="px-3 py-2 text-sm font-medium whitespace-nowrap hover:underline underline-offset-4 transition-all duration-300"
+                className="px-3 text-sm font-medium whitespace-nowrap hover:underline underline-offset-4 transition-all duration-300"
               >
                 {item.label}
               </a>
