@@ -3,7 +3,7 @@ import { logos } from "./data";
 export const Collaborations = () => {
     return (
         <div className="w-full flex flex-col p-5 scroll-offset-target items-center" id='collaborations'>
-            <h1 className="w-full text-3xl font-bold text-[#0b477f] text-center">
+            <h1 className="w-full text-3xl font-bold text-[#0b477f] text-center pb-5">
                 Collaborations
             </h1>
 

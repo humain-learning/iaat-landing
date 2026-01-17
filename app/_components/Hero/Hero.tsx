@@ -92,7 +92,7 @@ export const Hero = () => {
                 <PrimaryButton text='Apply Now!' href='https://forms.gle/zRXAexLH1Z49VVKE8' external={true}/>
             </div>
             <div className="absolute bottom-5 right-5 z-50">
-                <PrimaryButton text="Explore More" href="#journey/" />
+                <PrimaryButton text="Explore More" href="#journey" />
             </div>
         </div>
     );

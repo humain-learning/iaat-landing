@@ -17,7 +17,7 @@ export const NavBar = () => {
             <li key={item.href}>
               <a
                 href={item.href}
-                className="px-3 text-sm font-medium whitespace-nowrap hover:underline underline-offset-4 transition-all duration-300"
+                className="px-3 text-sm min-[1023px]:text-md font-medium whitespace-nowrap hover:underline underline-offset-4 transition-all duration-300"
               >
                 {item.label}
               </a>

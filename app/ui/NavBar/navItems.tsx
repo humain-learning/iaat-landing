@@ -5,5 +5,5 @@ export const navItems = [
     { label: 'What Schools are Looking For', href: '#schools-looking' },
     { label: 'Who Is It For', href: '#for-who' },
     { label: 'Collaborations', href: '#collaborations' },
-    { label: 'Apply', href: '#apply' },
+    { label: 'Apply', href: '#journey' },
 ];

@@ -51,11 +51,11 @@ export const Journey = () => {
 
 
   return (
-    <div className="w-full px-5 py-10 flex flex-col items-center justify-center" id="journey">
-      <div className="w-full grid grid-cols-3 items-center pr-5">
-        <div /> {/* empty spacer */}
+    <div className="w-full px-5 py-10 flex flex-col items-center justify-center scroll-offset-target" id="journey">
+      <div className="hidden w-full md:grid grid-cols-[1fr_2fr_1fr] items-center md:max-w-[80%] lg:max-w-[70%]">
+        <div className="" /> {/* empty spacer */}
 
-        <h1 className="text-3xl font-bold text-[#0b477f] text-center">
+        <h1 className="text-3xl font-bold text-[#0b477f] text-center ">
           Your Journey Starts Here
         </h1>
 
@@ -68,7 +68,20 @@ export const Journey = () => {
           />
         </div>
       </div>
+      <div className="md:hidden flex justify-between items-center w-full mb-5 px-5">
+        <h1 className="text-3xl font-bold text-[#0b477f] text-center">
+            Your Journey Starts Here
+        </h1>
 
+        <div className="flex justify-end">
+          <PrimaryButton
+            text="Apply Now!"
+            href="https://forms.gle/zRXAexLH1Z49VVKE8"
+            external
+            className="h-full whitespace-nowrap"
+          />
+        </div>
+      </div>
       <div className="flex flex-col gap-5 py-10 items-center justify-between w-full md:max-w-[80%] lg:max-w-[70%]">
 
         <div className="w-full flex flex-col bg-gray-200 rounded-lg transition-all duration-300 relative">
@@ -189,6 +202,17 @@ export const Journey = () => {
             </div>
             <a href="tel:+918588052814" className="text-[#124477] whitespace-nowrap underline underline-offset-4 font-bold">
               +91 8588052814
+            </a>
+          </div>
+        </div>
+
+        <div className="w-full flex flex-col">
+          <div className="w-full h-auto p-5 bg-gray-200 rounded-lg flex items-center gap-4">
+            <div className="w-full text-md">
+              Download Brochure
+            </div>
+            <a href="/files/PGC-IB Brochure.pdf" download className="text-[#124477] whitespace-nowrap underline underline-offset-4 font-bold">
+              <img src="/icons/download.svg" alt="Play Icon" className="h-5 w-5 object-contain ml-2" />
             </a>
           </div>
         </div>

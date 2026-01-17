@@ -2,7 +2,7 @@
 import { useState, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
-import { videos, features, testimonials } from './data';
+import { videos, testimonials } from './data';
 import type { Swiper as SwiperType } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -21,7 +21,7 @@ export const Distinction = () => {
 
     return (
         <div className="w-full flex flex-col scroll-offset-target py-5" id="course-why">
-            <h1 className="w-full text-3xl font-normal pb-4 px-5">What Makes PGC-IB Distinctive</h1>
+            <h1 className="w-full text-center text-3xl font-bold text-[#0b477f] pb-5 px-5">What Makes PGC-IB Distinctive</h1>
             
             <div className="w-full max-w-4xl mx-auto px-5">
                 <Swiper
@@ -63,18 +63,6 @@ export const Distinction = () => {
                     ))}
                 </div>
                 
-                {/* <div className=''>
-                    {features.map((feature) => (
-                        <div key={feature.id} className="flex items-center py-2">
-                            <img src={feature.icon} alt={`Feature ${feature.id} icon`} className="h-12 w-12 shrink-0" />
-                            <div className="text-normal pl-5">
-                                <p>{feature.line1}</p>
-                                <p>{feature.line2}</p>
-                            </div>
-                        </div>
-                    ))}
-                </div> */}
-                {/* <div className='py-5'><span className='text-lg text-blue-500'>Portfolio:</span><span className='text-lg'> Showcase of growth and authentic voice</span></div> */}
             </div>    
             <div className="w-full py-8 overflow-hidden">
                 <Marquee 

@@ -14,7 +14,7 @@ export const Footer = () => {
                     <div className="flex flex-col gap-2 text-end">
                         <a href="https://www.iamateacher.in/About-Us-Our-Team.html" target="_blank" rel="noopener noreferrer" className="hover:underline">Team</a>
                         <a href="https://www.iamateacher.in/About-Us-Our-Team.html" target="_blank" rel="noopener noreferrer" className="hover:underline">Advisory Board</a>
-                        <a href="#overview" className="hover:underline">FAQs</a>
+                        <a href="/files/PGC-IB FAQs.pdf" target="_blank" rel="noopener noreferrer" className="hover:underline">FAQs</a>
                     </div>
                 </div>
                 <div className="flex flex-row justify-between items-center py-5 w-full">
