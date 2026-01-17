@@ -24,9 +24,9 @@ export const Progressive = () => {
             <div className="w-full max-w-6xl mx-auto">
                 <Swiper
                     modules={[Pagination]}
-                    spaceBetween={8}
-                    slidesPerView={3}
-                    centeredSlides={false}
+                    spaceBetween={20}
+                    slidesPerView={1}
+                    centeredSlides={true}
                     grabCursor={true}
                     onSwiper={(swiper) => (swiperRef.current = swiper)}
                     onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
@@ -42,7 +42,7 @@ export const Progressive = () => {
                 >
                     {videos.map((video, index) => (
                         <SwiperSlide key={video.id}>
-                            <VideoCard video={video} index={index} vertical />
+                            <VideoCard video={video} index={index} />
                         </SwiperSlide>
                     ))}
                 </Swiper>

@@ -8,28 +8,25 @@ export const Slide1 = () => {
                 <h1 className="max-[376px]:text-3xl text-5xl mb-1 sm:mb-2">
                     Triad of Excellence
                 </h1>
-                <div className="flex flex-col text-2xl text-gray-600 py-5">
-                    Post-Graduate Certificate in IB Education
-                </div>
             </div>
 
             <div className="grow flex items-center justify-center w-full z-20 relative">
 
-                <div className="relative w-full md:max-w-[50vw] max-w-[85vw] max-[375px]:max-w-[80vw] aspect-square">
+                <div className="relative w-full md:max-w-[35vw] max-w-[85vw] max-[375px]:max-w-[80vw] aspect-square">
                     
                     {/* Top Circle */}
                     <div className={`${circleClasses} top-0 left-1/2 -translate-x-1/2`}>
-                        <span className="w-[80%]">International Baccalaureate (IB) Inquiry</span>
+                        <span className="w-[50%]">International Baccalaureate (IB) Inquiry</span>
                     </div>
 
                     {/* Bottom Left Circle */}
-                    <div className={`${circleClasses} bottom-0 left-0 -translate-x-[5%] -translate-y-[5%] justify-start`}>
-                        <span className="w-[80%] pr-2 pt-5">The University of Melbourne’s Academic Rigour</span>
+                    <div className={`${circleClasses} bottom-0 left-0 -translate-x-[5%] -translate-y-[5%] justify-center`}>
+                        <span className="w-[50%] pr-2 pt-5">The University of Melbourne’s Academic Rigour</span>
                     </div>
 
                     {/* Bottom Right Circle */}
-                    <div className={`${circleClasses} bottom-0 right-0 translate-x-[5%] -translate-y-[5%] justify-end `}>
-                        <span className="w-[80%] pl-2 pt-5">I Am A Teacher's Human Centred Pedagogy</span>
+                    <div className={`${circleClasses} bottom-0 right-0 translate-x-[5%] -translate-y-[5%] justify-center`}>
+                        <span className="w-[50%] pl-2 pt-5">I Am A Teacher's Human Centred Pedagogy</span>
                     </div>
 
                 </div>

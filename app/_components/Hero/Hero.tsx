@@ -35,9 +35,9 @@ export const Hero = () => {
     };
 
     return (
-        <div className="w-full h-[90vh] relative overflow-hidden">
+        <div className="w-full h-[90vh] relative">
             <div 
-                className="absolute bottom-0 left-0 w-[200%] flex flex-col z-0"
+                className="absolute bottom-0 left-0 w-full flex flex-col z-0"
                 style={{ 
                     height: `${bandProgress * 35}%`,
                     transition: 'height 0.3s ease-out'

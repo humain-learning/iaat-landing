@@ -1,6 +1,6 @@
 import { Hero } from "./_components/Hero/Hero";
 import { NavBar } from "./ui/NavBar/NavBar";
-import { AtAGlance } from "./_components/AtAGlance/AtAGlance";
+import { Overview as AtAGlance } from "./_components/Overview/Overview";
 import { Distinction } from "./_components/Distinction/Distinction";
 import { Explore } from "./_components/Explore/Explore";
 import { Progressive } from "./_components/Progressive/Progressive";
@@ -15,7 +15,7 @@ export default function Home() {
   return (
         <div>
           {/* Mobile only */}
-          <div className="flex flex-col items-center justify-center">
+          <div>
             <Hero />
             <NavBar />
             <AtAGlance />
@@ -23,8 +23,8 @@ export default function Home() {
             <Explore />
             <Progressive />
             <Transforming />
-            <Journey />
             <ForWho />
+            <Journey />
             <Collaborations />
           </div>
 
@@ -33,8 +33,10 @@ export default function Home() {
             <Hero />
             <NavBar />
             <div className="flex w-full">
-              <div className="w-1/4">
-                <AtAGlance />
+              <div className="w-1/4 flex justify-center bg-gray-100">
+                <div className="sticky top-[16vh] z-30 h-fit ">
+                  <AtAGlance />
+                </div>
               </div>
               <div className="w-3/4 flex flex-col">
                 <Distinction />

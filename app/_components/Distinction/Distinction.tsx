@@ -2,11 +2,13 @@
 import { useState, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
-import { videos, features } from './data';
+import { videos, features, testimonials } from './data';
 import type { Swiper as SwiperType } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { VideoCard } from '../../ui/VideoCard';
+import { Marquee } from '@/app/ui/Marquee';
+import { TestimonialCard } from './Testimonials';
 
 
 export const Distinction = () => {
@@ -18,10 +20,10 @@ export const Distinction = () => {
     };
 
     return (
-        <div className="w-full flex flex-col p-5 scroll-offset-target" id="course-why">
-            <h1 className="w-full text-3xl font-normal pb-4">What Makes PGC-IB Distinctive</h1>
+        <div className="w-full flex flex-col scroll-offset-target py-5" id="course-why">
+            <h1 className="w-full text-3xl font-normal pb-4 px-5">What Makes PGC-IB Distinctive</h1>
             
-            <div className="w-full max-w-4xl mx-auto">
+            <div className="w-full max-w-4xl mx-auto px-5">
                 <Swiper
                     modules={[Pagination]}
                     spaceBetween={20}
@@ -30,6 +32,14 @@ export const Distinction = () => {
                     grabCursor={true}
                     onSwiper={(swiper) => (swiperRef.current = swiper)}
                     onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+                    breakpoints={{
+                        640: {
+                            spaceBetween: 12,
+                        },
+                        1024: {
+                            spaceBetween: 16,
+                        },
+                    }}
                     className="w-full"
                 >
                     {videos.map((video, index) => (
@@ -53,7 +63,7 @@ export const Distinction = () => {
                     ))}
                 </div>
                 
-                <div className=''>
+                {/* <div className=''>
                     {features.map((feature) => (
                         <div key={feature.id} className="flex items-center py-2">
                             <img src={feature.icon} alt={`Feature ${feature.id} icon`} className="h-12 w-12 shrink-0" />
@@ -63,9 +73,31 @@ export const Distinction = () => {
                             </div>
                         </div>
                     ))}
-                </div>
-                <div className='py-5'><span className='text-sm text-blue-500'>Portfolio:</span><span className='text-sm'> Showcase of growth and authentic voice</span></div>
+                </div> */}
+                {/* <div className='py-5'><span className='text-lg text-blue-500'>Portfolio:</span><span className='text-lg'> Showcase of growth and authentic voice</span></div> */}
+            </div>    
+            <div className="w-full py-8 overflow-hidden">
+                <Marquee 
+                    repeat={3} 
+                    pauseOnHover={false}
+                    className="w-full [--duration:100s]"
+                >
+                    {testimonials.map((testimonial, i) => (
+                    <div 
+                        key={i} 
+                        className="w-[320px] md:w-[360px] px-2"
+                    >
+                        <TestimonialCard
+                        name={testimonial.name}
+                        about={testimonial.about}
+                        quote={testimonial.quote}
+                        />
+                    </div>
+                    ))}
+                </Marquee>
             </div>
+            
+            
         </div>
     );
 };

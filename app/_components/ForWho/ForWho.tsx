@@ -11,7 +11,7 @@ export const ForWho = () => {
                 </h1>
             </div>
 
-            <div className="w-full grid grid-cols-2 md:grid-cols-3 p-5 gap-5">
+            <div className="w-full md:max-w-[80%] lg:max-w-[70%] grid grid-cols-2 md:grid-cols-3 p-5 gap-5">
                 {cardData.map((card, index) => (
                     <div className="w-full" key={index}>    
                         <Card 
@@ -30,18 +30,18 @@ export const ForWho = () => {
                 </h1>
             </div>
             
-            <div className="w-full p-5">
-                <div className=" w-full md:max-w-[25vw] h-auto flex flex-col items-start justify-start p-5 rounded-2xl border shadow-[1vmin_1vmin_0_0_#004b8c]">
-                    <img src='/assets/elligibility-icon1.png' className="object-contain w-[30%] h-auto px-5 " />
+            <div className="w-full p-5 md:max-w-[80%] lg:max-w-[70%]">
+                <div className=" w-full h-auto flex flex-col md:flex-row items-start justify-start p-5 rounded-2xl border shadow-[1vmin_1vmin_0_0_#004b8c]">
+                    <img src='/assets/elligibility-icon1.png' className="object-contain w-[30%] md:w-[10%] h-auto px-5 " />
                     <div className="w-full h-auto text-xl pt-3">
                         <p className="font-bold">Bachelor’s in Education</p>
                         <p className="font-normal">(or equivalent qualification) from a recognised university</p>
                     </div>
-                    <div className="text-3xl font-bold text-[#124477] py-3">OR</div>
-                    <img src='/assets/elligibility-icon2.png' className="object-contain w-[30%] h-auto px-5 " />
+                    <div className="text-3xl font-bold text-[#124477] py-3 pr-3">OR</div>
+                    <img src='/assets/elligibility-icon2.png' className="object-contain w-[30%] md:w-[10%] h-auto px-5 " />
                     <div className="w-full h-auto text-xl py-3">
                         <p className="font-bold">Bachelor’s Degree</p>
-                        <p className="font-normal">in any discipline with a minimum of three years of teaching experience</p>
+                        <p className="font-normal text-xl">in any discipline with a minimum of three years of teaching experience</p>
                     </div>
                 </div>
             </div>

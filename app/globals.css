@@ -113,7 +113,7 @@ html {
 }
 
 .scroll-offset-target {
-  scroll-margin-top: var(--sticky-offset, 0px);
+  scroll-margin-top: 16vh;
 }
 
 .backface-hidden {

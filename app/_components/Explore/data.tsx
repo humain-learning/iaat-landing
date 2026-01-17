@@ -21,8 +21,8 @@ export const cards = [
     },
     {
         id: 5,
-        title: 'Teaching Literacy and Numeracy',
-        description: 'Engage with ways of nurturing language and mathematical thinking that are authentic, conceptual, and deeply connected to children’s lives and identities.'
+        title: 'Nurturing Language and Mathematical Thinking',
+        description: 'Engage with Literacy and Numeracy in ways that are authentic, conceptual and deeply connected to children’s lives and identities.'
     },
     {
         id: 6,

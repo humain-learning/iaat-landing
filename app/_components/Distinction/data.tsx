@@ -1,33 +1,73 @@
 export const videos = [
-    { id: 1, url: 'https://player.vimeo.com/video/123456789', title: 'Video 1' },
-    { id: 2, url: 'https://player.vimeo.com/video/123456790', title: 'Video 2' },
-    { id: 3, url: 'https://player.vimeo.com/video/123456790', title: 'Video 3' },
+    { id: 1, url: 'https://player.vimeo.com/video/1155459664', title: 'Video 1' },
+    { id: 2, url: 'https://player.vimeo.com/video/1155459800', title: 'Video 2' },
+    { id: 3, url: 'https://player.vimeo.com/video/1155459853', title: 'Video 3' },
+    { id: 4, url: 'https://player.vimeo.com/video/1155459750', title: 'Video 4' },
+    { id: 5, url: 'https://player.vimeo.com/video/1155459461', title: 'Video 5' },
 ];
 
 export const features = [
     { 
         id: 1,
         icon: '/assets/distinction-feature-1.svg',
-        line1: 'Structured processes for lesson design,',
-        line2: 'feedback, and dialogue'
+        line1: 'Discover new ways to improve student learning,',
+        line2: ''
     },
     { 
         id: 2,
         icon: '/assets/distinction-feature-2.svg',
-        line1: 'Live sessions with',
-        line2: 'collaborative learning circles'
+        line1: 'Interact with leading academics',
+        line2: ''
     },
     { 
         id: 3,
         icon: '/assets/distinction-feature-3.svg',
-        line1: 'Classroom practice',
-        line2: 'that strengthens insight'
+        line1: 'Establish a strong, global peer network',
+        line2: ''
     },
     { 
         id: 4,
         icon: '/assets/distinction-feature-4.svg',
-        line1: 'Mentorship that builds',
-        line2: 'pedagogical depth'
+        line1: 'Increase your access to teaching jobs worldwide',
+        line2: ''
     },
+    { 
+        id: 5,
+        icon: '/assets/distinction-feature-5.svg',
+        line1: 'Gain access to IB community resources',
+        line2: ''
+    },
+];
 
+export const testimonials = [
+  {
+    name: 'Sunayana Uberoy',
+    about: 'University of Southern California, IAAT Alumna',
+    quote: 'Honestly, I did not expect this programme to be the life-transforming experience that it turned out to be. My time at IAAT has given me more food for thought than my entire education could give.'
+  },
+  {
+    name: 'Sumeeta Ghosh',
+    about: 'B.Tech IIT Kharagpur, Former Senior IT and Fintech Consultant, IAAT Alumna',
+    quote: 'In IAAT, I realised how essential it is for children to have hands-on experiences, reflect on them, and construct their own knowledge. It gives them a context for life, a way to carry their learning into every new situation they encounter.'
+  },
+  {
+    name: 'Sumedha Hegde',
+    about: 'School Founder, IAAT Alumna',
+    quote: 'My IAAT journey transformed how I see teaching. Learning now feels joyful, alive, and continuous. Even in an online format, the sense of connection and community was exceptional.'
+  },
+  {
+    name: 'Dr Shalini Advani',
+    about: 'Former School Director, Pathways School',
+    quote: 'Your training program has created the mindset & framework for the complex practices of the International Baccalaureate, better than any other background or training I have seen.'
+  },
+  {
+    name: 'Ms Sudha Sahay',
+    about: 'Principal, The Sri Ram School, Aravali',
+    quote: 'IAAT teachers are open to feedback and willing to learn, waiting for the last child in their class to understand concepts before moving on.'
+  },
+  {
+    name: 'Ashish Dhawan',
+    about: 'Founder, Ashoka University & Central Square Foundation',
+    quote: 'IAAT-ians have a bigger role to play than even the IIT-ians of India; IAAT teachers will transform our society, shape the lives of our children, parents and the community.'
+  }
 ];

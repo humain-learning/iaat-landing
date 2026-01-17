@@ -16,90 +16,97 @@ interface VideoCardProps {
 export const VideoCard = ({ video, index = 0, vertical = false }: VideoCardProps) => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [isMuted, setIsMuted] = useState(false);
+
     const iframeRef = useRef<HTMLIFrameElement | null>(null);
     const playerRef = useRef<any>(null);
 
-    const videoUrl = video.url ? `${video.url}${video.url.includes('?') ? '&' : '?'}background=1` : '';
+    const videoUrl = video.url
+        ? `${video.url}${video.url.includes('?') ? '&' : '?'}background=1`
+        : '';
 
     useEffect(() => {
-        if (!videoUrl) return;
+        if (!videoUrl || !iframeRef.current) return;
 
-        const iframe = iframeRef.current;
-        if (!iframe) return;
+        const player = new Player(iframeRef.current);
+            playerRef.current = player;
 
-        playerRef.current = new Player(iframe);
-
-        (async () => {
+            (async () => {
             try {
-                // Force muted autoplay and start playback
-                playerRef.current.setMuted && await playerRef.current.setMuted(true).catch(() => {});
-                await playerRef.current.play().catch(() => {});
-                setIsPlaying(true);
+                // First let Vimeo boot with background mode
+                await new Promise(r => setTimeout(r, 150));
+
+                // Then force the state you actually want
+                await player.setMuted(true);
+                await player.pause();
+
+                // Sync React to the real player state
                 setIsMuted(true);
-            } catch (e) {
-                // ignore initialization errors
-            }
-        })();
+                setIsPlaying(false);
+            } catch {}
+            })();
 
-        const onPlay = () => setIsPlaying(true);
-        const onPause = () => setIsPlaying(false);
+        const syncPlay = async () => {
+            try {
+                const paused = await player.getPaused();
+                setIsPlaying(!paused);
+            } catch {}
+        };
 
-        playerRef.current.on('play', onPlay);
-        playerRef.current.on('pause', onPause);
+        const syncMute = async () => {
+            try {
+                const muted = await player.getMuted();
+                setIsMuted(!!muted);
+            } catch {}
+        };
+
+        player.on('play', syncPlay);
+        player.on('pause', syncPlay);
+        player.on('volumechange', syncMute);
 
         return () => {
-            if (playerRef.current) {
-                try {
-                    playerRef.current.unload && playerRef.current.unload();
-                } catch (e) {}
-                playerRef.current = null;
-            }
+            player.off('play', syncPlay);
+            player.off('pause', syncPlay);
+            player.off('volumechange', syncMute);
+            try {
+                player.unload();
+            } catch {}
+            playerRef.current = null;
         };
     }, [videoUrl]);
 
     const togglePlay = async () => {
         const player = playerRef.current;
         if (!player) return;
+
         try {
-            // ensure a low default volume just before playback
-            player.setVolume && (await player.setVolume(1).catch(() => {}));
             const paused = await player.getPaused();
             if (paused) {
+                await player.setVolume(1).catch(() => {});
                 await player.play();
-                setIsPlaying(true);
             } else {
                 await player.pause();
-                setIsPlaying(false);
             }
-        } catch (e) {}
+        } catch {}
     };
 
     const toggleMute = async () => {
         const player = playerRef.current;
         if (!player) return;
+
         try {
-            // prefer setMuted when available
-            if (player.getMuted && player.setMuted) {
-                const muted = await player.getMuted();
-                await player.setMuted(!muted);
-                setIsMuted(!muted);
-            } else if (player.getVolume && player.setVolume) {
-                const vol = await player.getVolume();
-                if (vol === 0) {
-                    await player.setVolume(0.2);
-                    setIsMuted(false);
-                } else {
-                    await player.setVolume(0);
-                    setIsMuted(true);
-                }
-            }
-        } catch (e) {}
+            const muted = await player.getMuted();
+            await player.setMuted(!muted);
+        } catch {}
     };
 
     if (!videoUrl) {
         return (
             <div className={`w-full m-4 rounded-3xl overflow-hidden bg-gray-200 transition duration-300`}>
-                <div className={`relative flex items-center justify-center ${vertical ? 'pt-[177.78%]' : 'pt-[56.25%]'}`}>
+                <div
+                    className={`relative flex items-center justify-center ${
+                        vertical ? 'pt-[177.78%]' : 'pt-[56.25%]'
+                    }`}
+                >
                     <p className="text-gray-500 text-sm p-4">Video Placeholder</p>
                 </div>
             </div>
@@ -107,7 +114,7 @@ export const VideoCard = ({ video, index = 0, vertical = false }: VideoCardProps
     }
 
     return (
-        <div className='w-full rounded-lg bg-white transition duration-300 object-fill overflow-hidden border'>
+        <div className="w-full rounded-lg bg-white transition duration-300 object-fill overflow-hidden border">
             <div className={`relative ${vertical ? 'pt-[177.78%]' : 'pt-[56.25%]'}`}>
                 <iframe
                     ref={iframeRef}
@@ -116,31 +123,57 @@ export const VideoCard = ({ video, index = 0, vertical = false }: VideoCardProps
                     title={video.title || 'Student Creation Video'}
                     allow="autoplay; fullscreen; picture-in-picture"
                     allowFullScreen
-                ></iframe>
+                />
 
-                {/* Mute/unmute button top-right */}
                 <button
                     aria-label={isMuted ? 'Unmute video' : 'Mute video'}
                     onClick={toggleMute}
-                    className={`absolute z-20 bg-transparent rounded-full flex items-center justify-center transition hover:scale-105 ${vertical ? 'top-1 right-1 p-1' : 'top-3 right-2 p-2'}`}
+                    className={`absolute z-20 bg-transparent rounded-full flex items-center justify-center transition hover:scale-105 ${
+                        vertical ? 'top-1 right-1 p-1' : 'top-3 right-2 p-2'
+                    }`}
                 >
                     {isMuted ? (
-                        <img src="/icons/muted.svg" alt="Muted" className={`drop-shadow-[0_0_6px_rgba(0,0,0,0.35)] ${vertical ? 'h-4 w-4' : 'h-7 w-7'}`} />
+                        <img
+                            src="/icons/muted.svg"
+                            alt="Muted"
+                            className={`drop-shadow-[0_0_6px_rgba(0,0,0,0.35)] ${
+                                vertical ? 'h-4 w-4' : 'h-7 w-7'
+                            }`}
+                        />
                     ) : (
-                        <img src="/icons/unmuted.svg" alt="Unmuted" className={`drop-shadow-[0_0_6px_rgba(0,0,0,0.35)] ${vertical ? 'h-4 w-4' : 'h-7 w-7'}`} />
+                        <img
+                            src="/icons/unmuted.svg"
+                            alt="Unmuted"
+                            className={`drop-shadow-[0_0_6px_rgba(0,0,0,0.35)] ${
+                                vertical ? 'h-4 w-4' : 'h-7 w-7'
+                            }`}
+                        />
                     )}
                 </button>
 
-                {/* Custom play button bottom-right */}
                 <button
                     aria-label={isPlaying ? 'Pause video' : 'Play video'}
                     onClick={togglePlay}
-                    className={`absolute z-20 bg-transparent rounded-full flex items-center justify-center transition hover:scale-105 ${vertical ? 'bottom-1 right-1 p-1' : 'bottom-4 right-4 p-2'}`}
+                    className={`absolute z-20 bg-transparent rounded-full flex items-center justify-center transition hover:scale-105 ${
+                        vertical ? 'bottom-1 right-1 p-1' : 'bottom-4 right-4 p-2'
+                    }`}
                 >
                     {isPlaying ? (
-                        <img src="/icons/pauseButton.svg" alt="Pause" className={`drop-shadow-[0_0_6px_rgba(0,0,0,0.35)] ${vertical ? 'h-3 w-3' : 'h-5 w-5'}`} />
+                        <img
+                            src="/icons/pauseButton.svg"
+                            alt="Pause"
+                            className={`drop-shadow-[0_0_6px_rgba(0,0,0,0.35)] ${
+                                vertical ? 'h-3 w-3' : 'h-5 w-5'
+                            }`}
+                        />
                     ) : (
-                        <img src="/icons/playButton.svg" alt="Play" className={`drop-shadow-[0_0_6px_rgba(0,0,0,0.35)] ${vertical ? 'h-3 w-3' : 'h-5 w-5'}`} />
+                        <img
+                            src="/icons/playButton.svg"
+                            alt="Play"
+                            className={`drop-shadow-[0_0_6px_rgba(0,0,0,0.35)] ${
+                                vertical ? 'h-3 w-3' : 'h-5 w-5'
+                            }`}
+                        />
                     )}
                 </button>
             </div>

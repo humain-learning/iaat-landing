@@ -52,14 +52,24 @@ export const Journey = () => {
 
   return (
     <div className="w-full px-5 py-10 flex flex-col items-center justify-center" id="journey">
-      <div className="w-full flex items-center justify-between pr-5">
-        <h1 className="w-3/5 text-3xl font-bold text-[#0b477f]">
+      <div className="w-full grid grid-cols-3 items-center pr-5">
+        <div /> {/* empty spacer */}
+
+        <h1 className="text-3xl font-bold text-[#0b477f] text-center">
           Your Journey Starts Here
         </h1>
-        <PrimaryButton text="Apply Now!" href="https://forms.gle/zRXAexLH1Z49VVKE8" external className="h-full"/>
+
+        <div className="flex justify-end">
+          <PrimaryButton
+            text="Apply Now!"
+            href="https://forms.gle/zRXAexLH1Z49VVKE8"
+            external
+            className="h-full"
+          />
+        </div>
       </div>
 
-      <div className="flex flex-col gap-5 py-10 items-center justify-between w-full">
+      <div className="flex flex-col gap-5 py-10 items-center justify-between w-full md:max-w-[80%] lg:max-w-[70%]">
 
         <div className="w-full flex flex-col bg-gray-200 rounded-lg transition-all duration-300 relative">
 
