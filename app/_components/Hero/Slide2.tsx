@@ -3,8 +3,7 @@ export const Slide2 = () => {
     return (
         <div className="w-full h-full flex flex-col relative">
             <h1 className="text-3xl text-start px-5 pt-10">
-                <span>IB Ready, Classroom Ready </span>
-                <span>and Future Ready.</span>
+                <span>Unlock a new teaching mindset</span>
             </h1>
 
             <div className='text-[#124578] text-base xs:text-lg sm:text-xl md:text-[1.5rem] px-5 xs:px-4 sm:px-5 py-3 xs:py-4 sm:py-5 text-start'>Dual Certificate</div>
