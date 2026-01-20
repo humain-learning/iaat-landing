@@ -11,7 +11,10 @@ export const NavBar = () => {
       ref={navRef}
       className="sticky top-[10vh] z-40 w-full bg-[#124477] text-white shadow-xl"
     >
-      <div className="w-full h-[6vh] overflow-x-auto scrollbar-hide items-center flex md:justify-center">
+      <div
+        className="w-full h-[6vh] overflow-x-auto overflow-y-hidden scrollbar-hide items-center flex md:justify-center"
+        style={{ touchAction: "pan-x" }}
+      >
         <ul className="flex items-center justify-start md:justify-center gap-1 px-4 py-3 min-w-max">
           {navItems.map((item) => (
             <li key={item.href}>
