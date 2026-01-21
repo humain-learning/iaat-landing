@@ -78,7 +78,6 @@ export const Overview = () => {
             </div>
 
 
-            <div className='py-5'><span className='text-lg text-blue-500'>Portfolio:</span><span className='text-lg'> Showcase of growth and authentic voice</span></div>
         </div>
     );
 };
