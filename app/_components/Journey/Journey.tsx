@@ -84,7 +84,7 @@ export const Journey = () => {
       </div>
       <div className="flex flex-col gap-5 py-10 items-center justify-between w-full md:max-w-[80%] lg:max-w-[70%]">
 
-        <div className="w-full flex flex-col bg-gray-200 rounded-lg transition-all duration-300 relative">
+        <div className="hidden w-full flex-col bg-gray-200 rounded-lg transition-all duration-300 relative">
 
             {/* HEADER CONTENT (always visible) */}
             <div className="w-full p-5 flex justify-between items-center gap-x-7">
@@ -178,6 +178,22 @@ export const Journey = () => {
             </div>
         </div>
 
+
+        <div className="w-full flex flex-col">
+          <div className="w-full h-auto p-5 bg-gray-200 rounded-lg flex items-center gap-4">
+            <div className="text-md w-full">
+              Register For Our Information Session
+            </div>
+            <a
+              href="https://calendly.com/iamateacher-support/20min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#124477] text-end whitespace-nowrap underline underline-offset-4 font-bold min-w-1/4"
+            >
+              Book Now
+            </a>
+          </div>
+        </div>
         {/* OTHER CARDS — unchanged */}
         <div className="w-full flex flex-col">
           <div className="w-full h-auto p-5 bg-gray-200 rounded-lg flex items-center gap-4">
@@ -185,7 +201,7 @@ export const Journey = () => {
               Register For Our Information Session
             </div>
             <a
-              href="https://tinyurl.com/PGCIB-24126"
+              href="https://us06web.zoom.us/webinar/register/WN_Ro9YDRG6SlacB3Ke8UhO0w"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#124477] text-end whitespace-nowrap underline underline-offset-4 font-bold min-w-1/4"
