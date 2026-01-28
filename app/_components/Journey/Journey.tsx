@@ -182,7 +182,7 @@ export const Journey = () => {
         <div className="w-full flex flex-col">
           <div className="w-full h-auto p-5 bg-gray-200 rounded-lg flex items-center gap-4">
             <div className="text-md w-full">
-              Register For Our Information Session
+              Book a One-on-One Session with a Counsellor
             </div>
             <a
               href="https://calendly.com/iamateacher-support/20min"
