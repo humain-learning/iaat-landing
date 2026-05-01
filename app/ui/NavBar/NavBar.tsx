@@ -9,10 +9,10 @@ export const NavBar = () => {
   return (
     <nav
       ref={navRef}
-      className="sticky top-[10vh] z-40 w-full bg-[#124477] text-white shadow-xl"
+      className="sticky top-[10vh] z-40 w-full  text-white shadow-xl flex flex-col"
     >
       <div
-        className="w-full h-[6vh] overflow-x-auto overflow-y-hidden scrollbar-hide items-center flex md:justify-center"
+        className="w-full h-[6vh] overflow-x-auto bg-[#124477] overflow-y-hidden scrollbar-hide items-center flex md:justify-center"
         style={{ touchAction: "pan-x" }}
       >
         <ul className="flex items-center justify-start md:justify-center gap-1 px-4 py-3 min-w-max">
@@ -28,6 +28,9 @@ export const NavBar = () => {
           ))}
         </ul>
       </div>
+	  <div className="text-center p-2 bg-[#1d638f]">
+		Attend the online information session for the Post Graduate Certificate in IB Education on 16<sup>th</sup> of May at 11am by registering <a href="https://tinyurl.com/PGCIB-16526" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 font-bold">here</a>.
+	  </div>
     </nav>
   );
 };
