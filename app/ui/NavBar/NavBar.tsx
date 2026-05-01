@@ -28,9 +28,16 @@ export const NavBar = () => {
           ))}
         </ul>
       </div>
-	  <div className="text-center p-2 bg-[#1d638f]">
-		Attend the online information session for the Post Graduate Certificate in IB Education on 16<sup>th</sup> of May at 11am by registering <a href="https://tinyurl.com/PGCIB-16526" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 font-bold">here</a>.
-	  </div>
+      <div className="announcement-marquee bg-[#1d638f] p-2">
+        <div className="announcement-marquee-track">
+          <p className="announcement-marquee-item text-center md:w-full">
+            Attend the online information session for the Post Graduate Certificate in IB Education on 16<sup>th</sup> of May at 11am by registering <a href="https://tinyurl.com/PGCIB-16526" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 font-bold">here</a>.
+          </p>
+          <p className="announcement-marquee-item text-center md:hidden" aria-hidden="true">
+            Attend the online information session for the Post Graduate Certificate in IB Education on 16<sup>th</sup> of May at 11am by registering <span className="underline underline-offset-4 font-bold">here</span>.
+          </p>
+        </div>
+      </div>
     </nav>
   );
 };
