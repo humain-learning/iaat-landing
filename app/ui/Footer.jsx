@@ -5,12 +5,17 @@ export const Footer = () => {
     return (
         <div className="w-full bg-[#124477] py-5 px-10 flex flex-col justify-between items-center">
             <div className="w-full md:w-[80%] lg:w-[70%]">
-                <div className="grid grid-cols-2 text-white text-md w-full">
+                <div className="grid grid-cols-3 text-white text-md w-full">
                     <div className="flex flex-col gap-2 text-start ">
                         <a href="https://www.iamateacher.in/terms-conditions.php" target="_blank" rel="noopener noreferrer" className="hover:underline">Terms of Use</a>
                         <a href="https://www.iamateacher.in/privacy-policy.php" target="_blank" rel="noopener noreferrer" className="hover:underline">Privacy Policy</a>
                         <a href="https://www.iamateacher.in/About-Us-Our-Vison-and-Approach.html" target="_blank" rel="noopener noreferrer"className="hover:underline">About Us</a>
                     </div>
+					<div className="text-white text-sm text-center py-4">
+						<p>Address:</p>
+						<p className="font-semibold">IAAT EDUCATION PRIVATE LIMITED</p>
+						<p>K-1, Green Park Main, New Delhi 110016</p>
+                	</div>
                     <div className="flex flex-col gap-2 text-end">
                         <a href="https://www.iamateacher.in/About-Us-Our-Team.html" target="_blank" rel="noopener noreferrer" className="hover:underline">Team</a>
                         <a href="https://www.iamateacher.in/About-Us-Our-Team.html" target="_blank" rel="noopener noreferrer" className="hover:underline">Advisory Board</a>
