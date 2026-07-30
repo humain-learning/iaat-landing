@@ -201,7 +201,7 @@ export const Journey = () => {
               Register For Our Information Session
             </div>
             <a
-              href="https://tinyurl.com/PGCIB-27th-June"
+              href="https://us02web.zoom.us/meeting/register/nqxxu-TBTBODkKCse_fQ3Q"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#124477] text-end whitespace-nowrap underline underline-offset-4 font-bold min-w-1/4"

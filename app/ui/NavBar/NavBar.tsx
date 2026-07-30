@@ -31,10 +31,10 @@ export const NavBar = () => {
       <div className="announcement-marquee bg-[#1d638f] p-2">
         <div className="announcement-marquee-track">
           <p className="announcement-marquee-item text-center md:w-full">
-            Attend the online information session for the Post Graduate Certificate in IB Education on 27<sup>th</sup> of June at 11AM IST by registering <a href="https://tinyurl.com/PGCIB-27th-June" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 font-bold">here</a>.
+            Attend the online information session for the Post Graduate Certificate in IB Education on 1<sup>st</sup> of August at 11AM IST by registering <a href="https://us02web.zoom.us/meeting/register/nqxxu-TBTBODkKCse_fQ3Q" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 font-bold">here</a>.
           </p>
           <p className="announcement-marquee-item text-center md:hidden" aria-hidden="true">
-            Attend the online information session for the Post Graduate Certificate in IB Education on 27<sup>th</sup> of June at 11AM IST by registering <a href="https://tinyurl.com/PGCIB-27th-June" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 font-bold">here</a>.
+            Attend the online information session for the Post Graduate Certificate in IB Education on 1<sup>st</sup> of August at 11AM IST by registering <a href="https://us02web.zoom.us/meeting/register/nqxxu-TBTBODkKCse_fQ3Q" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 font-bold">here</a>.
           </p>
         </div>
       </div>
